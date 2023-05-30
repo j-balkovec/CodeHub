@@ -38,5 +38,5 @@ Contributions to the Projects directory are welcome! If you have any improvement
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and distribute the code and projects within this directory.
+This project is licensed under the [MIT License](https://snystrom.github.io/memes-manual/LICENSE.html). You are free to use, modify, and distribute the code and projects within this directory.
 
