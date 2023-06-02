@@ -1,1 +1,26 @@
-
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Animation</title>
+    <link rel="stylesheet" type="text/css" href="celebrate.css">
+  </head>
+  <body>
+    <div id="viewport">
+      <canvas id="sky" width="640" height="480"></canvas>
+      <div class="marquee">
+        <img src="https://i.stack.imgur.com/bGZ1m.png" width="80" height="43">
+        <div id="banner">Error</div>
+      </div>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="celebrate.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            fillBanner('#banner');
+            var anim = animate('#sky');
+            setTimeout(function() { anim.stop(); }, 60000);
+        });
+    </script>
+  </body>
+</html>
