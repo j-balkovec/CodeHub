@@ -1,42 +1,50 @@
 # Projects Directory
 
-Welcome to the Projects directory! This directory contains various projects, including a calculator implemented using HTML, CSS, and JavaScript.
+- Animation
+- More to come...
+
+# Animation
+This is a simple website that showcases a fireworks animation using JavaScript, HTML, and CSS. The animation creates an interactive and visually appealing display of fireworks. There is some simple math involved to get the particles right.
 
 ## Table of Contents
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Customization](#customization)
+- [Contributing](#contributing)
+- [License](#license)
 
-- [Calculator](#calculator)
+## Getting Started
 
-## Calculator
+To get started with this project, you can follow these steps:
 
-The calculator project is a web-based calculator that allows users to perform basic arithmetic operations. It has been implemented using HTML, CSS, and JavaScript.
+1. Clone the repository or download the source code.
+2. Ensure you have a modern web browser installed.
+3. Open the `index.html` file in your web browser.
 
-### Project Structure
+## Usage
 
-- `index.html`: The main HTML file that represents the calculator interface.
-- `style.css`: The CSS file that provides styles and layout for the calculator.
-- `script.js`: The JavaScript file that handles the calculator's logic and functionality.
+Once the website is open in your browser, you can enjoy the fireworks animation. The animation will start automatically and display various colorful fireworks bursting in the sky.
 
-### Usage
+You can also interact with the animation by clicking anywhere on the screen. Each click will create a new firework at the clicked position. Feel free to experiment and create your own unique fireworks display.
 
-To use the calculator, follow these steps:
+## Customization
 
-1. Clone the repository or navigate to the "Projects" directory on your local machine.
+If you would like to customize the fireworks animation, you can modify the following files:
 
-2. Open the `index.html` file in a web browser.
+- `index.html`: You can change the overall structure of the webpage, add additional content, or modify the layout.
+- `style.css`: This file contains the CSS code for styling the webpage and the fireworks animation. You can change the colors, sizes, positions, and other visual aspects of the fireworks.
+- `script.js`: The JavaScript code responsible for the fireworks animation is located in this file. You can modify the animation behavior, such as the speed, number of particles, and explosion patterns.
 
-3. The calculator interface will be displayed, allowing you to perform calculations.
-
-### Technologies Used
-
-- HTML: Used for creating the structure and layout of the calculator.
-- CSS: Used for styling the calculator interface.
-- JavaScript: Used for implementing the calculator's logic and functionality.
+Feel free to experiment with different values and settings to create your own unique fireworks experience.
 
 ## Contributing
 
-Contributions to the Projects directory are welcome! If you have any improvements, additional projects, or bug fixes to suggest, feel free to submit a pull request. Please follow the contribution guidelines and code of conduct outlined in the repository.
+Contributions to this project are welcome. If you find any issues or have ideas for improvements, you can submit them as GitHub issues or create a pull request with your proposed changes.
+
+When contributing, please follow the existing code style and ensure that your changes do not introduce any breaking issues.
 
 ## License
 
-This project is NOT licensed under the [MIT License](https://theuselessweb.com). You are free to use, modify, and distribute the code and projects within this directory.
+This project is licensed under the [MIT License](LICENSE). Feel free to use and modify the code for your own purposes.
+
 
