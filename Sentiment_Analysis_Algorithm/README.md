@@ -45,7 +45,7 @@ python3 main.py
 ```
 
 ### Mock Data
-GitHub prohibits the upload of files greater than 25MB. The original dataset can be found [here](https://brightdata.com/products/datasets/Twitter?kw=&cpn=13950045001&utm_matchtype=&utm_matchtype=&cq_src=google_ads&cq_cmp=13950045001&cq_term=&cq_plac=&cq_net=g&cq_plt=gp&utm_term=&utm_campaign=datasets-c1-search_generic-kw_en-desktop&utm_source=adwords&utm_medium=ppc&utm_content=dataset-dsa&hsa_acc=1393175403&hsa_cam=13950045001&hsa_grp=133051793747&hsa_ad=622510825430&hsa_src=g&hsa_tgt=dsa-532722321722&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAjw44mlBhAQEiwAqP3eVurbFkqu723FK31ZH0DbS9CyjSjy3Pg_BXbENPoi6tMsdFPWuZyw1hoClHEQAvD_BwE)
+GitHub prohibits the upload of files greater than 25MB. The original dataset can be found [here](https://brightdata.com/products/datasets/Twitter)
 
 `mock_s.csv` contains 1000 lines of data
 `mock_m.csv` contains 10000 lines of data
