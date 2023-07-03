@@ -33,14 +33,6 @@ Sentiment Analysis Algorithm
 Go into "myenv" in the conda environment where all the dependencies are installed
 """
 
-"""__plan__"""
-'''
-Make a separate file that finds the extremes to see if the algo is working properly
-Data visualization
-Testing
-Bug Checking & Optimization
-'''
-
 """__imports__"""
 import csv
 import json
@@ -51,7 +43,6 @@ from enum import Enum
 import nltk
 from tqdm import tqdm
 from nltk.sentiment import SentimentIntensityAnalyzer
-import multiprocessing as mp
 from extremes import find_extremes #extremes.py
 
 """__constants__"""
