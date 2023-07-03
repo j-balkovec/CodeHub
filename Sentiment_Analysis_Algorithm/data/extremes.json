@@ -1,0 +1,22 @@
+{
+    "highest_polarity_objects": [
+        {
+            "polarity": 0.9781,
+            "id": "1469223258",
+            "date": "Tue Apr 07 05:40:01 PDT 2009",
+            "user": "melandnessa",
+            "text": "I love the love the love loves mebut that guy i love dont loves me",
+            "classification": "[positive]"
+        }
+    ],
+    "lowest_polarity_objects": [
+        {
+            "polarity": -0.9769,
+            "id": "1468827823",
+            "date": "Tue Apr 07 03:56:47 PDT 2009",
+            "user": "star_scapes",
+            "text": "Fuck fuck fuck fuck fuck fuck fuck I got the job that I didnt want and I have to take it",
+            "classification": "[negative]"
+        }
+    ]
+}
