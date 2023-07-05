@@ -161,7 +161,7 @@ Feel free to modify the example and explore other member functions and operation
 
 Contributions to this repository are welcome! If you find any issues or have improvements to suggest, feel free to submit a pull request. Please follow the contribution guidelines and code of conduct outlined in the repository.
 
-# License
+## License
 
 This project is NOT licensed under the [MIT License](#LICENSE). You are free to use, modify, and distribute the code and projects within this directory.
 
