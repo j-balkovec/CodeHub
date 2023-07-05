@@ -1,7 +1,6 @@
 # Test File in C++
 
-![Build](https://img.shields.io/badge/build-passing-brightgreen)
-![License](https://img.shields.io/badge/license-MIT-blue)
+![License]([https://img.shields.io/badge/license-MIT-blue](https://opensource.org/license/mit/))
 
 This repository contains a test file written in C++. The purpose of this file is to provide a set of test functions and assertion methods to facilitate testing in C++ projects.
 
