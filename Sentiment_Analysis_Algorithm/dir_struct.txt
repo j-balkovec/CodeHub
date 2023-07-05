@@ -1,0 +1,20 @@
+Directory structure
+
+├── __pycache__
+│   ├── extremes.cpython-311.pyc
+│   ├── main.cpython-311.pyc
+├── data
+│   └── extremes.json
+├── documentation
+│   └── README.md
+├── extremes.py
+├── main.py
+├── mock_data
+│   ├── mock_l.csv
+│   ├── mock_m.csv
+│   ├── mock_s.csv
+│   ├── mock_xl.csv
+│   ├── mock_xs.csv
+│   └── twitter.csv
+├── out
+│   └── output.json
