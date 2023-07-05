@@ -1,5 +1,8 @@
 # Testing Framework in Python
 
+![Build](https://img.shields.io/badge/build-passing-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-blue)
+
 Created by Jakob Balkovec - Wed 5 Jul 2023
 
 This project aims to rewrite the mock testing framework originally written in C++, into Python.
@@ -52,7 +55,7 @@ def main() -> int:
 The above demonstration (also included in `main.py`) uses `ASSERT` to check whether the condition is `True` or `False`, 
 it will then print a *timestamp* in **YELLOW**, a *green* message if the test **PASSED**, or a **RED** message if the test *FAILED*.
 
-## ![License]([https://img.shields.io/badge/license-MIT-blue](https://opensource.org/license/mit/))
+## [License]([https://img.shields.io/badge/license-MIT-blue](https://opensource.org/license/mit/))
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
