@@ -8,12 +8,13 @@ Purpose of this file is to rewrite the mock testing framework previously written
 
 import traceback
 from datetime import datetime
+form typing import Any
 
 """__constants__"""
-_YELLOW = "\033[33m"
-_GREEN = "\033[32m"
-_RED = "\033[31m"
-_RESET = "\033[0m"  # white
+_YELLOW: str = "\033[33m"
+_GREEN: str = "\033[32m"
+_RED: str = "\033[31m"
+_RESET: str = "\033[0m"  # white
 
 """__summary__
 :desc: Prints a message indicating that a test has passed.
@@ -23,7 +24,7 @@ _RESET = "\033[0m"  # white
 :return: None
 """
 @staticmethod
-def _print_pass(func_name = ""):
+def _print_pass(func_name: str = "") -> None:
     print(_GREEN + "[TEST {} PASSED]\n".format(func_name) + _RESET)
 
 """__summary__
@@ -34,7 +35,7 @@ def _print_pass(func_name = ""):
 :return: None
 """
 @staticmethod
-def _print_fail(message = "", func_name = "") -> None:
+def _print_fail(message: str = "", func_name: str = "") -> None:
     print(_RED + "[TEST {} FAILED]".format(func_name) + _RESET)
     if message != "":
         print(message)
@@ -66,7 +67,7 @@ def _invoke(func_name: str) -> None:
 :return: None
 """
 @staticmethod
-def ASSERT(condition, message = "", func_name = ""):
+def ASSERT(condition: Any, message: str = "", func_name: str = "") -> None:
   _invoke(ASSERT.__name__)
   if condition:
       _print_pass(func_name = func_name)
@@ -89,7 +90,7 @@ def ASSERT(condition, message = "", func_name = ""):
 :return: None
 """
 @staticmethod
-def ASSERT_EQUAL(expected, actual, message = "", func_name = ""):
+def ASSERT_EQUAL(expected: Any, actual: Any, message: str = "", func_name: str = "") -> None:
   print(f"\n__{ASSERT_EQUAL.__name__}::INVOKED__\n")
   if expected == actual:
       _print_pass(func_name = func_name)
@@ -114,7 +115,7 @@ Returns:
 - None
 """   
 @staticmethod
-def ASSERT_NOT_EQUAL(not_expected, actual, message = "", func_name = ""):
+def ASSERT_NOT_EQUAL(not_expected: Any, actual: Any, message: str = "", func_name: str = "") -> None:
   print(f"\n__{ASSERT_NOT_EQUAL.__name__}::INVOKED__\n")
   if not_expected != actual:
       _print_pass(func_name = func_name)
@@ -137,7 +138,7 @@ def ASSERT_NOT_EQUAL(not_expected, actual, message = "", func_name = ""):
 :return: None.
 """
 @staticmethod
-def ASSERT_TRUE(condition, message = "", func_name = ""):
+def ASSERT_TRUE(condition: Any, message: str = "", func_name: str = "") -> None:
   print(f"\n__{ASSERT_TRUE.__name__}::INVOKED__\n")
   if condition:
     _print_pass(func_name = func_name)
@@ -157,7 +158,7 @@ def ASSERT_TRUE(condition, message = "", func_name = ""):
 :return: None
 """
 @staticmethod
-def ASSERT_FALSE(condition, message = "", func_name = ""):
+def ASSERT_FALSE(condition: Any, message: str = "", func_name: str = "") -> None:
   print(f"\n__{ASSERT_FALSE.__name__}::INVOKED__\n")
   if not condition:
     _print_pass(func_name = func_name)
@@ -182,7 +183,7 @@ def ASSERT_FALSE(condition, message = "", func_name = ""):
 :return: None
 """
 @staticmethod
-def ASSERT_IN(expected, actual, message = "", func_name = ""):
+def ASSERT_IN(expected: Any, actual: Any, message: str = "", func_name: str = "") -> None:
   print(f"\n__{ASSERT_IN.__name__}::INVOKED__\n")
   if expected in actual:
     _print_pass(func_name = func_name)
@@ -200,7 +201,7 @@ def ASSERT_IN(expected, actual, message = "", func_name = ""):
 :return: None
 """
 @staticmethod
-def ASSERT_NOT_IN(not_expected, actual, message = "", func_name = ""):
+def ASSERT_NOT_IN(not_expected : Any, actual: Any, message: str = "", func_name: str = ""):
   print(f"\n__{ASSERT_NOT_IN.__name__}::INVOKED__\n")
   if not_expected in actual:
     _print_pass(func_name = func_name)
@@ -224,7 +225,7 @@ def ASSERT_NOT_IN(not_expected, actual, message = "", func_name = ""):
 :return: None
 """
 @staticmethod
-def ASSERT_NO_THROW(statement, message="", func_name=""):
+def ASSERT_NO_THROW(statement: callable, message: str = "", func_name: str= "") -> None:
   print(f"\n__{ASSERT_NO_THROW.__name__}::INVOKED__\n")
   try:
       statement()
@@ -255,7 +256,7 @@ def ASSERT_NO_THROW(statement, message="", func_name=""):
 :return: None
 """
 @staticmethod
-def ASSERT_THROW(statement, message="", func_name=""):
+def ASSERT_THROW(statement: callable, message: str = "", func_name: str = "") -> None:
   print(f"\n__{ASSERT_THROW.__name__}::INVOKED__\n")
   try:
       statement()
@@ -286,7 +287,7 @@ def ASSERT_THROW(statement, message="", func_name=""):
 :return: None
 """      
 @staticmethod
-def ASSERT_GREATER(value, threshold, message="", func_name=""):
+def ASSERT_GREATER(value: Any, threshold: Any, message: str = "", func_name: str = "") -> None:
     print(f"\n__{ASSERT_GREATER.__name__}::INVOKED__\n")
     if value > threshold:
         _print_pass(func_name)
@@ -310,7 +311,7 @@ def ASSERT_GREATER(value, threshold, message="", func_name=""):
 :type func_name: str.
 :return: None
 """
-def ASSERT_LESS(value, threshold, message="", func_name=""):
+def ASSERT_LESS(value: Any, threshold: Any, message: str = "", func_name: str = "") -> None:
     print(f"\n__{ASSERT_LESS.__name__}::INVOKED__\n")
     if value < threshold:
         _print_pass(func_name)
