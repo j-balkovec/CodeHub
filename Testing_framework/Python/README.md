@@ -52,7 +52,7 @@ def main() -> int:
 The above demonstration (also included in `main.py`) uses `ASSERT` to check whether the condition is `True` or `False`, 
 it will then print a *timestamp* in **YELLOW**, a *green* message if the test **PASSED**, or a **RED** message if the test *FAILED*.
 
-## License
+## ![License]([https://img.shields.io/badge/license-MIT-blue](https://opensource.org/license/mit/))
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
