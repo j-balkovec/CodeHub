@@ -6,20 +6,25 @@
 It allows for deep and shallow copying, move semantics and much more. The lsit is not iterable but it is on the TODO list.
 
 ## Table of Contents
+
 - [Constructor](#constructor)
 - [Destructor](#destructor)
 - [Copy Constructor](#copy-constructor)
 - [Move Constructor](#move-constructor)
 - [Assignment Operator](#assignment-operator)
+- [Move Assignment Operator](#move-assignment-operator)
 - [Push Back](#push-back)
 - [Push Front](#push-front)
 - [Pop Back](#pop-back)
 - [Pop Front](#pop-front)
 - [Print Reverse](#print-reverse)
-- [Clear](#clear)
-- [Swap](#swap)
-- [Empty](#empty)
-- [Size](#size)
+- [Front](#front)
+- [Back](#back)
+- [At](#at)
+- [Delete Value](#delete-value)
+- [Search](#search)
+- [Resize](#resize)
+- [Utility](#utility)
 
 ## Constructor
 
@@ -100,8 +105,30 @@ It allows for deep and shallow copying, move semantics and much more. The lsit i
 - `void sort();`: Sorts the Linked List
 - `void remove_duplicates();`: Removes duplicates in the Linked list
 
-    
-## Usage
+## Program Usage
+
+1. Fork the repository and run the following in the terminal 
+
+```shell
+make all
+// or
+make
+```
+
+## Library Usage
+
+1. Fork the repository
+2. Now that you have the library file, you can link it with your other programs or projects. When compiling your program, you need to specify the library file using the appropriate compiler flag. For example, with `g++`, you can use the following command:
+
+```shell
+g++ yourprogram.cpp -o yourprogram -L/path/to/library -lyourlibrary
+```
+
+[note]: In this command, you need to replace `/path/to/library` with the actual path to the directory containing the library file, and yourlibrary with the actual name of your library.
+
+3. Use the library: With the library linked successfully, you can now use the functions and classes defined in the `.h` file and implemented in the `.cpp` file within your program.
+
+## Header File Usage
 
 To use the `single_l` class, follow these steps:
 
