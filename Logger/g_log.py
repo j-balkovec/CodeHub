@@ -332,21 +332,3 @@ def filter_by_log_level(log_entry: str, levels: List[str]) -> bool:
     end_index = log_entry.index(']', start_index)
     log_level = log_entry[start_index:end_index].strip()
     return log_level in levels
-
-
-"""_summary_
-TESTING THE G_LOG
-"""
-def raise_error() -> None:
-    raise Exception("This is an error raised in TEST")
-
-def main() -> None:
-    logger = g_log()
-    logger.print_license()
-    logger.add_filter(lambda log_entry: filter_by_log_level(log_entry, ['INFO', 'DEBUG', 'WARNING']))
-    logger.log(None, "message", 0, raise_error) #logged
-    logger.log(None, "message", 1, raise_error) #logged
-    logger.log(None, "message", 3, raise_error) #not logged
-    
-if __name__ == "__main__":
-    main()
