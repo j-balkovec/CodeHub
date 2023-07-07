@@ -69,16 +69,22 @@ Here's an example that demonstrates how to use the **`g_log`** library:
 ```python
 from g_log import g_log
 
-def raise_error():
-    raise Exception("This is an error raised in TEST")
+def raise_error() -> None:
+    raise ValueError("This is an error raised in TEST")
 
-def main():
+def main() -> None:
     logger = g_log()
-    logger.add_filter(lambda log_entry: g_log.filter_by_log_level(log_entry, ['INFO', 'DEBUG', 'WARNING']))
-    logger.log(None, "message", 0, raise_error)  # logged
-    logger.log(None, "message", 1, raise_error)  # logged
-    logger.log(None, "message", 3, raise_error)  # not logged
-
+    logger.print_license()
+    log_filter = lambda log_entry: filter_by_log_level(log_entry, ['INFO', 'DEBUG', 'WARNING'])
+    log_entries = [
+        (None, "message", 0, raise_error),
+        (None, "message", 1, raise_error),
+        (None, "message", 3, raise_error)
+    ]
+    logged_entries = [entry for entry in log_entries if log_filter(entry)]
+    for entry in logged_entries:
+        logger.log(*entry)
+    
 if __name__ == "__main__":
     main()
 ```
