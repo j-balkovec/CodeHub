@@ -142,7 +142,8 @@ class g_log:
     :return: None
     """
     def print_license(self) -> None:
-        print(f"\n{_LICENSE}\n")
+        license_text = f"\n{_LICENSE}\n"
+        print(license_text, end="")
         return None
     
     """__summary__
@@ -164,14 +165,8 @@ class g_log:
 
     :return int: The line number of the function within the file it is defined, or None if the line number cannot be determined.
     """
-    def get_line_number(self, func: Callable[..., T]) -> None:
-        lines, _ = inspect.getsourcelines(func)
-        frame = inspect.currentframe()
-        while frame:
-            if frame.f_code.co_filename == inspect.getsourcefile(func):
-                return frame.f_lineno - 1
-            frame = frame.f_back
-        return None
+    def get_line_number(self, func: Callable[..., T]) -> Optional[int]:
+        return inspect.findsource(func)[1] - 1 if inspect.isfunction(func) else None
     
     """__summary__
     :desc: Adds a filter function to the list of filters.
@@ -192,10 +187,7 @@ class g_log:
     :return: bool: True if the log entry should be logged, False otherwise.
     """
     def should_log(self, log_entry: str) -> bool:
-        for filter_func in self.filters:
-            if not filter_func(log_entry):
-                return False
-        return True
+        return all(filter_func(log_entry) for filter_func in self.filters)
     
     """__summary__
     :desc: Logs a message with a given condition, message, level, and optional function.
@@ -268,10 +260,7 @@ class g_log:
                   otherwise in the format '%Y-%m-%d %H:%M:%S'.
     """
     def get_timestamp(self) -> str:
-        if not _accurate:
-            return datetime.now().strftime('%H:%M:%S')
-        else:
-            return datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        return datetime.now().strftime('%H:%M:%S') if not _accurate else datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
     """__summary__
     Writes the given log entry to a file.
@@ -328,7 +317,5 @@ class g_log:
 """
 @staticmethod
 def filter_by_log_level(log_entry: str, levels: List[str]) -> bool:
-    start_index = log_entry.index('::') + 3
-    end_index = log_entry.index(']', start_index)
-    log_level = log_entry[start_index:end_index].strip()
+    log_level = log_entry.split('::', 1)[1].split(']', 1)[0].strip()
     return log_level in levels
