@@ -23,7 +23,7 @@
 
 '''_Could be changed to "Desktop" or any folder you would like organized_'''
 
-TARGET_DIR_ = "__TEST__"
+TARGET_DIR_ = "Downloads"
 
 '''_List is unhashable, using tuples instead_'''
 
