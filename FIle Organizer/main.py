@@ -139,9 +139,9 @@ def establish_current_dir() -> List[str]:
         quit(exit_code=1)
     
 def main() -> None:
-    run_test()
-    #files = establish_current_dir()
-    #organize_files(files)
+    #run_test()
+    files = establish_current_dir()
+    organize_files(files)
     #input("\nPress [Enter] to continue...")
     #delete_dir()
     
