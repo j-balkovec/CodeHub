@@ -15,9 +15,12 @@
     main.py
 
 @description:
-    This script implements a sentiment analysis algorithm that determines the sentiment 
-    polarity (positive, negative, or neutral) of textual data. 
-    It utilizes the TextBlob library for sentiment analysis.
+    This script is a Python program designed to organize files 
+    within a specified directory into different categories 
+    based on their file extensions. It aims to enhance file 
+    organization and grouping for better management. The script 
+    achieves this by moving files into subdirectories that correspond
+    to specific categories such as programming languages, file types, and data formats.
     
 @usage:
     Run this script with the necessary dependencies installed and provide the name of the folder
