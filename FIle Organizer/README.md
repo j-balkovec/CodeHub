@@ -53,6 +53,6 @@ Main function of the script.
 
 ## Testing
 
-The script includes testing functionalities. Run tests using the run_test() function.
+The script includes testing functionalities. Run tests by uncommenting the run_test() function.
 
 Note: This README provides a summary of the code. For the complete code and details, refer to the main.py file.
