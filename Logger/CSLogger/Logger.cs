@@ -13,15 +13,12 @@
 /// It provides functionality for logging messages with different severity levels.
 /// The script also includes a filter function for filtering log entries based on log levels.
 /// </brief>
+/// 
+/// <see cref="https://github.com/j-balkovec/Projects/blob/main/Logger/CSLogger/Logger.cs">
 
 using System;
 using System.Diagnostics;
-using System.IO;
 using System.Reflection;
-using System.Collections.Generic;
-using static System.Formats.Asn1.AsnWriter;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-using System.Drawing;
 
 namespace Loggger
 {
@@ -37,7 +34,7 @@ namespace Loggger
         ///
         /// </constants>
         private const int MaxFiles = 10;
-        private const int MaxSizeOf = 1024;
+        private const long MaxSizeOf = 4 * 1024 * 1024;
 
         ///<remove_all_logging_files>
         ///find {/path/to/wd} -type f -name "*.log" -exec rm { } +
@@ -75,7 +72,7 @@ namespace Loggger
         /// </summary>
         public GLog()
         {
-            string baseFilename = Path.GetFileNameWithoutExtension(Assembly.GetEntryAssembly().Location);
+            string baseFilename = Path.GetFileNameWithoutExtension(path: Assembly.GetEntryAssembly().Location);
             string full_filename = "/Users/jbalkovec/desktop/cpsc/CPSC 3200/P3/Logs";
             _filename = Path.Combine(full_filename, $"_{GetUniqueFilename(baseFilename, ".log")}");
         }
@@ -106,8 +103,14 @@ namespace Loggger
 
                 for (int i = 0; i < stackTrace.FrameCount; i++)
                 {
+                    #pragma warning disable CS8600 
                     StackFrame frame = stackTrace.GetFrame(i);
+                    #pragma warning restore CS8600
+                    #pragma warning disable CS8602
+                    #pragma warning disable CS8600 
                     MethodBase methodBase = frame.GetMethod();
+                    #pragma warning restore CS8600
+                    #pragma warning restore CS8602
 
                     if (methodBase == method)
                     {
@@ -145,7 +148,7 @@ namespace Loggger
         /// <param name="level">The log level (0 = DEBUG, 1 = INFO, 2 = WARNING, 3 = ERROR, 4 = CRITICAL).</param>
         /// <param name="func">An optional delegate representing a function to log.</param>
         /// <returns>The generated log entry.</returns>
-        public string Log(string condition, string message, int level, Delegate? func = null)
+        public string Log(string message, int level, string? condition = null, Delegate ? func = null)
         {
             lock (_lock)
             {
@@ -158,7 +161,7 @@ namespace Loggger
                 string conditionStr = condition ?? "[No Condition]";
                 string funcStr = func?.Method?.Name ?? "[No Function]";
 
-                string logEntry = $"[{GetTimestamp()}]::[{levelStr}] {conditionStr} {funcStr}(): {message}";
+                string logEntry = $"\n[{GetTimestamp()}]::[{levelStr}] {message} \n {funcStr}(): {conditionStr}";
 
                 if (func != null)
                 {
@@ -246,9 +249,9 @@ namespace Loggger
                 File.Move(_filename, backupFilename);
 
                 string[] strings = Directory.GetFiles(path: Path.GetDirectoryName(_filename))
-                                    .Where(f => f.StartsWith(_filename))
-                                    .OrderByDescending(f => f)
-                                    .ToArray();
+                                            .Where(f => f.StartsWith(_filename))
+                                            .OrderByDescending(f => f)
+                                            .ToArray();
                 string[] existingBackups = strings;
 
                 if (existingBackups.Length >= MaxFiles)
