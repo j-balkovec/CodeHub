@@ -4,6 +4,8 @@
 
 The Weather App is a simple iOS application built in Swift that allows users to check the current weather conditions for a given location. It provides real-time weather data, including temperature, humidity, wind speed, and more.
 
+## Photos
+
 ## Features
 
 - **Current Weather:** Get the latest information about the current weather conditions in your location.
