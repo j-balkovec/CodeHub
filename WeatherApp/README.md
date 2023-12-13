@@ -6,8 +6,7 @@ The Weather App is a simple iOS application built in Swift that allows users to 
 
 ## Photo
 
-<img src="(https://github.com/j-balkovec/Projects/blob/main/WeatherApp/SShot.PNG)" width="300" height="200">
-
+<img src="(https://github.com/j-balkovec/Projects/blob/main/WeatherApp/SShot.PNG)" width="200" height="400">
 
 ## Features
 
