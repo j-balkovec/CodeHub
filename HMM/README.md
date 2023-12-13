@@ -38,22 +38,13 @@ This module contains the implementation of a Hidden Markov Model class, designed
 
 ## Usage
 ```python
-from src import HiddenMarkovModel
+###
+Define states, observations, ... in `constants.py`
+###
+from constants import *
 
-# Define model parameters (STATES_, OBSERVATIONS_, TRANSITION_PROB_, EMISSION_PROB_, INITIAL_PROB_, OBSERVATION_SEQ)
-# ...
-
-# Create HiddenMarkovModel instance
-hmm = HiddenMarkovModel(STATES_, OBSERVATIONS_, TRANSITION_PROB_, EMISSION_PROB_, INITIAL_PROB_, predicted_states)
-
-# Run expectation-maximization algorithm
-hmm.expectation_maximization_algorithm(OBSERVATION_SEQ)
-
-# Predict the most likely sequence of states
-hmm.predict(OBSERVATION_SEQ)
-
-# Export model parameters to a JSON file
-hmm.json_dumps()
+# Run the provided main function
+hmm_main(STATES_2_, OBSERVATIONS_2_, TRANSITION_PROB_2_, EMISSION_PROB_2_, INITIAL_PROB_2_, OBSERVATION_SEQ_2_)
 ```
 
 ## Exported JSON Format
