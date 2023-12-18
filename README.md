@@ -3,7 +3,6 @@ Explore my portfolio of projects spanning various programming languages and doma
 
 ### Animation
 Languages: HTML, CSS, JavaScript<br>
-Description: Short animation of a plane going from one side of the screen to the other<br>
 
 ### File Organizer
 Languages: Python, YAML<br>
