@@ -10,7 +10,7 @@
 This script implements a sentiment analysis algorithm that determines the sentiment polarity (positive, negative, or neutral) of textual data. The data is displayed in a neat-looking GUI made with the customtkinter module.
 
 ## Image
-[link]
+![GUI](GUI.png)
 
 ## Usage
 
