@@ -26,7 +26,7 @@ Languages: Python, HTML, CSS, Js <br>
 Libraries: `shutil`, `os`, `nltk`, `tqdm`, `flask`<br>
 
 ### Testing Framework
-Languages: JavaScript, Python, C++, C#, Makefile <br>
+Languages: JavaScript, Python, C++, C#, Java, Makefile <br>
 Libraries: `threading`, `threading`, `os`, `traceback`, `<thread>`, `System.Threading`, `System.Linq` <br>
 
 ### Weather App
