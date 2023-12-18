@@ -6,7 +6,7 @@ setup(
     author='Jakob Balkovec',
     description='Logging library for Python',
     long_description='''The g_log library provides functionality for logging messages with different severity levels.''',
-    url='https://github.com/j-balkovec/Projects/tree/main/Logger',
+    url='https://github.com/j-balkovec/Projects/tree/main/Logger/PyhtonLogger',
     packages=find_packages(),
     classifiers=[
         'Development Status :: 5 - Production/Stable',
