@@ -20,9 +20,7 @@ Libraries: `<thread>`<br>
 
 ### Logger
 Languages: C#, Python<br>
-Libraries: <br>
--> C#: `System.Diagnostics`, `System.Reflection`<br>
--> Python: `threading`, `sys`, `traceback`, `os`<br>
+Libraries: `System.Diagnostics`, `System.Reflection`, `threading`, `sys`, `traceback`, `os`<br>
 
 ### Sentiment Analysis Algorithm
 Languages: Python, HTML, CSS, Js <br>
