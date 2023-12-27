@@ -268,4 +268,4 @@ tree
 Contributions are always welcome! If you find a bug, have a suggestion, or want to add a new feature, feel free to issue a pull request. We appreciate your help in making this project better for everyone.
 
 ### License
-This project is licensed under the [MIT](LICENSE) - see the LICENSE file for details.
+This project is licensed under the MIT license, see the LICENSE file for details.
