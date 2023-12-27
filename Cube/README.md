@@ -30,8 +30,8 @@ The main function calls the generateSpinningCube function to start the spinning 
 Compile and run the program using a C compiler:
 
 ```
-gcc spinning_cube.c -o spinning_cube -lm
-./spinning_cube
+gcc main.c -o cube -lm
+./cube
 ```
 
 The spinning cube animation will be displayed in the terminal.
