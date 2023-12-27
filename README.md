@@ -1,4 +1,4 @@
-# Projects Directory
+# CodeHub
 Explore my portfolio of projects spanning various programming languages and domains:<br>
 
 ### Animation
