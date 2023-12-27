@@ -84,18 +84,18 @@ Links:
 
 2. Navigate to the project directory:
 
-  ```bash
-  cd IMDb_model
-  ```
+   ```bash
+   cd IMDb_model
+   ```
 ### Usage
 To run the model simply run the following command in the terminal
 
 ```bash
-# Assuming already in model directory
+# Assuming already in the model directory
 python3 model.py
 ```
 
-Procedure that will be executed:
+The procedure that will be executed:
 - Loads the IMDb dataset
 - Prepossesses the data
 - Builds and trains the model
@@ -106,7 +106,7 @@ Procedure that will be executed:
 The model's outcomes were juxtaposed with those of a sentiment analysis script leveraging the NLTK library to determine string polarity. Notably, both the script and the model yielded highly comparable results. If you'd like to experiment with this independently, execute the following command in the terminal:
 
 ```bash
-# Assuming already in nltk_analysis directory
+# Assuming already in the nltk_analysis directory
 python3 src.py
 ```
 
@@ -268,4 +268,4 @@ tree
 Contributions are always welcome! If you find a bug, have a suggestion, or want to add a new feature, feel free to issue a pull request. We appreciate your help in making this project better for everyone.
 
 ### License
-This project is licensed under the [MIT] - see the LICENSE file for details.
+This project is licensed under the [MIT](LICENSE) - see the LICENSE file for details.
