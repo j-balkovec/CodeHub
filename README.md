@@ -42,6 +42,3 @@ Libraries: `nltk`, `textblob`, `tkinter`, `customtkinter`, `vader` <be>
 **More to come...**<br>
   
 Feel free to explore each project for detailed documentation, source code, and implementation details. If you have any questions or feedback, don't hesitate to reach out!
-
-
-
