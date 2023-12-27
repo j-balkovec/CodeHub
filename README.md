@@ -1,8 +1,12 @@
-# Projects Directory
+# CodeHub
 Explore my portfolio of projects spanning various programming languages and domains:<br>
 
 ### Animation
 Languages: HTML, CSS, JavaScript<br>
+
+### Spinning Cube
+Languages: C++ <br>
+Libraries: `<math>` <br>
 
 ### File Organizer
 Languages: Python, YAML<br>
@@ -37,7 +41,11 @@ Libraries: `Foundation`, `CoreLocation` <br>
 Language: Python <br>
 Libraries: `nltk`, `textblob`, `tkinter`, `customtkinter`, `vader` <be>
 <br>
-<br>
+<be>
+
+### IMDb Sentiment Analysis ML Model
+Languages: HTML, CSS, JavaScript, Python <br>
+Libraries: `tensorflow`, `keras`, `numpy`, `nltk`, `tqdm`, `textblob`
 
 **More to come...**<br>
   
